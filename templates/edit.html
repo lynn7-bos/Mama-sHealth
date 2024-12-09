@@ -1,0 +1,44 @@
+{% extends 'starter-page.html' %}
+{% load static %}
+
+{% block body %}
+ <div class="container section-title" data-aos="fade-up">
+    <h2>Update Appointment Details</h2>
+     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab ad aspernatur assumenda autem consectetur ea est exercitationem facere fugit hic incidunt iure iusto perspiciatis repellat unde, veritatis voluptatem voluptates!</p>
+ </div>
+
+        <div class="col-lg-6">
+            <form  method="POST" action="/update/{{ appointment.id }}" >
+                {% csrf_token %}
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <input type="text" value="{{ appointment.name }}" name="name" class="form-control" placeholder="Your Name" required="">
+                </div>
+
+                <div class="col-md-6 ">
+                  <input type="email" value="{{ appointment.email }}" class="form-control" name="email" placeholder="Your Email" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <input type="text" value="{{ appointment.subject }}" class="form-control" name="subject" placeholder="Subject" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <textarea  class="form-control" value="{{ appointment.message }}" name="message" rows="6" placeholder="Message" required=""></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                  <button type="submit">UPDATE</button>
+                </div>
+
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
+
+
+{% endblock %}

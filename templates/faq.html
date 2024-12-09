@@ -1,0 +1,128 @@
+{% extends 'starter-page.html' %}
+{% load static %}
+
+{% block body %}
+	 <!-- Faq Section -->
+    <section id="faq" class="faq section" xmlns="http://www.w3.org/1999/html">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Frequently Asked Questions</h2>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row justify-content-center">
+
+          <div class="col-lg-10" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="faq-container">
+
+              <div class="faq-item faq-active">
+                <h3>What should I do to prepare for pregnancy?</h3>
+                <div class="faq-content">
+                  <p>Begin by scheduling a preconception check-up with your healthcare provider.
+Adopt a healthy lifestyle: eat a balanced diet, exercise regularly, and avoid smoking or alcohol.
+Take prenatal vitamins with folic acid to reduce the risk of birth defects..</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>What are the warning signs during pregnancy that need immediate medical attention?</h3>
+                <div class="faq-content">
+                  <p>Seek immediate medical care if you experience:
+Severe abdominal pain or cramping,
+Heavy bleeding or unusual discharge,
+Persistent headaches, vision changes, or swelling in the face or hands and
+Decreased fetal movement.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>How do I know if I’m in labor?</h3>
+                <div class="faq-content">
+                  <p>Signs of labor include:
+
+Regular, strong contractions that get closer together over time.
+Water breaking (amniotic sac rupture).
+Lower back pain and pressure.
+If unsure, contact your healthcare provider or visit a hospital.
+</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>How can I manage postpartum depression?</h3>
+                <div class="faq-content">
+                  <p>Recognize the signs: feelings of sadness, fatigue, or disinterest in the baby lasting more than two weeks.
+Reach out to your doctor for support or therapy.
+Join support groups to share experiences with other mothers.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>What should I expect in the first weeks after childbirth?</h3>
+                <div class="faq-content">
+                  <p>Your body will be healing, so rest and good nutrition are essential.
+Breastfeeding might take time to adjust, and lactation consultants can help.
+Schedule a postpartum check-up 6 weeks after delivery.
+Keep track of the baby’s vaccinations and health milestones.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>What vaccinations does my newborn need?</h3>
+                <div class="faq-content">
+                  <p>At birth, your baby should receive the following vaccinations:
+
+BCG (to prevent tuberculosis).
+Hepatitis B.
+Oral polio vaccine (as per your region's health guidelines).
+Your doctor will guide you on the immunization schedule.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+            </div>
+
+          </div><!-- End Faq Column-->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Faq Section -->
+
+     <div class="container section-title" data-aos="fade-up">
+        <h2>Mia the Maternal Guide</h2>
+        <p>Your Virtual Assistant</p>
+      </div>
+
+     <div class="container">
+
+        <div class="row justify-content-center">
+
+          <div class="col-lg-10" data-aos="fade-up" data-aos-delay="100">
+
+
+              <form method="GET">
+              {% csrf_token %}
+                <label for="query">Ask me a question:</label>
+                <input type="text" id="query" name="query" class="form-control">
+    <button type="submit" class="btn btn-warning mt-2">Ask</button>
+
+     {% if answer %}
+    <p><strong>Answer:</strong> {{ answer }}</p>
+     {% endif %}
+              </form>
+
+          </div>
+        </div>
+     </div>
+
+{% endblock %}

@@ -1,0 +1,156 @@
+{% extends 'starter-page.html' %}
+{% load static %}
+
+{% block body %}
+
+<!-- Features Section -->
+    <section id="features" class="features section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Explore with us</h2>
+        <p>Let's Learn about motherhood</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+        <div class="row justify-content-between">
+
+          <div class="col-lg-5 d-flex align-items-center">
+
+            <ul class="nav nav-tabs" data-aos="fade-up" data-aos-delay="100">
+              <li class="nav-item">
+                <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#features-tab-1">
+                  <i class="bi bi-binoculars"></i>
+                  <div>
+                    <h4 class="d-none d-lg-block">Pre Pregnancy</h4>
+                    <p>
+                      This is the period before conception when a woman prepares physically, emotionally, and medically for pregnancy.
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-2">
+                  <i class="bi bi-box-seam"></i>
+                  <div>
+                    <h4 class="d-none d-lg-block">Pregnancy</h4>
+                    <p>
+                      The nine-month period during which a fetus develops in the uterus, divided into three trimesters.
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-3">
+                  <i class="bi bi-brightness-high"></i>
+                  <div>
+                    <h4 class="d-none d-lg-block">Postpartum Preiod</h4>
+                    <p>
+                      The first six weeks after childbirth, focusing on Physical recovery and emotional adjustment.
+                    </p>
+                  </div>
+                </a>
+              </li>
+            </ul><!-- End Tab Nav -->
+
+          </div>
+
+          <div class="col-lg-6">
+
+            <div class="tab-content" data-aos="fade-up" data-aos-delay="200">
+
+              <div class="tab-pane fade active show" id="features-tab-1">
+                <img src="{% static 'assets/img/Image-19.jpg' %}" alt="" class="img-fluid">
+              </div><!-- End Tab Content Item -->
+
+              <div class="tab-pane fade" id="features-tab-2">
+                <img src="{% static 'assets/img/Image-17.jpg' %}" alt="" class="img-fluid">
+              </div><!-- End Tab Content Item -->
+
+              <div class="tab-pane fade" id="features-tab-3">
+                <img src="{% static 'assets/img/image-01.jpg' %}" alt="" class="img-fluid">
+              </div><!-- End Tab Content Item -->
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Features Section -->
+
+    <!-- Features Details Section -->
+    <section id="features-details" class="features-details section">
+
+      <div class="container">
+
+        <div class="row gy-4 justify-content-between features-item">
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <img src="{% static 'assets/img/image-02.jpg' %}" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-5 d-flex align-items-center" data-aos="fade-up" data-aos-delay="200">
+            <div class="content">
+              <h3>Red Flags in Pregnancy</h3>
+              <p>
+                Pregnancy is a time of excitement and change, but it also requires vigilance. While many symptoms are normal, some may indicate complications that need urgent medical attention. Here are key red flags every pregnant person should be aware of
+              </p>
+              <a href="#" class="btn more-btn">Learn More</a>
+            </div>
+          </div>
+
+        </div><!-- Features Item -->
+
+        <div class="row gy-4 justify-content-between features-item">
+
+          <div class="col-lg-5 d-flex align-items-center order-2 order-lg-1" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="content">
+              <h3>Understanding Postpartum Depression: What Every Mother Should Know</h3>
+              <p>
+                Postpartum depression (PPD) is a mood disorder that can affect mothers after childbirth. Unlike the "baby blues," which are short-lived, postpartum depression is more intense and can persist for months, significantly impacting the well-being of both mother and baby. Here, we explore what PPD is, its symptoms, causes, and how to seek help.
+              </p>
+              <ul>
+                <li><i class="bi bi-easel flex-shrink-0"></i> Et corporis ea eveniet ducimus.</li>
+                <li><i class="bi bi-patch-check flex-shrink-0"></i> Exercitationem dolorem sapiente.</li>
+                <li><i class="bi bi-brightness-high flex-shrink-0"></i> Veniam quia modi magnam.</li>
+              </ul>
+              <p></p>
+              <a href="#" class="btn more-btn">Learn More</a>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-up" data-aos-delay="200">
+            <img src="{% static 'assets/img/image-03.jpg' %}" class="img-fluid" alt="">
+          </div>
+
+        </div><!-- Features Item -->
+
+           <div class="container">
+
+        <div class="row gy-4 justify-content-between features-item">
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <img src="{% static 'assets/img/image-04.jpg' %}" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-5 d-flex align-items-center" data-aos="fade-up" data-aos-delay="200">
+            <div class="content">
+              <h3>Dealing with Unruly Children: Strategies for Parents and Caregivers</h3>
+              <p>
+                Managing unruly behavior in children can be challenging, but with the right approach, it can also be an opportunity for growth—for both the child and the caregiver. Unruly behavior is often a child's way of expressing unmet needs or navigating emotions they cannot yet articulate. Here are some proven strategies to address and manage such behavior effectively.
+              </p>
+              <a href="#" class="btn more-btn">Learn More</a>
+            </div>
+          </div>
+
+      </div>
+
+    </section><!-- /Features Details Section -->
+
+
+
+{% endblock %}

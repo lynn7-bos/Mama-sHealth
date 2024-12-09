@@ -1,0 +1,110 @@
+{% extends 'starter-page.html' %}
+{% load static %}
+
+{% block body %}
+
+     <section id="more-features" class="more-features section">
+
+      <div class="container">
+
+        <div class="row justify-content-around gy-4">
+
+          <div class="col-lg-6 d-flex flex-column justify-content-center order-2 order-lg-1" data-aos="fade-up" data-aos-delay="100" >
+            <h3> At MaMa's Health, we believe every mother deserves comprehensive support...</h3>
+            <p> ...throughout her journey from conception to postpartum and beyond. Our mission is to bridge gaps in maternal health care by providing accurate information, essential resources, and a supportive community for mothers, caregivers, and healthcare professionals.</p>
+
+            <div class="row">
+
+              <div class="col-lg-6 icon-box d-flex">
+                <i class="bi bi-bag-heart flex-shrink-0" ></i>
+                <div>
+                  <h4>Education</h4>
+                  <p>Empowering women with knowledge about maternal and neonatal health </p>
+                </div>
+              </div><!-- End Icon Box -->
+
+              <div class="col-lg-6 icon-box d-flex">
+                <i class="bi bi-patch-check flex-shrink-0"></i>
+                <div>
+                  <h4>Wellbeing</h4>
+                  <p>Promoting holistic well-being for mothers and their families</p>
+                </div>
+              </div><!-- End Icon Box -->
+
+              <div class="col-lg-6 icon-box d-flex">
+                <i class="bi bi-brightness-high flex-shrink-0"></i>
+                <div>
+                  <h4>Community</h4>
+                  <p>Fostering a community that shares experiences, advice, and encouragement</p>
+                </div>
+              </div><!-- End Icon Box -->
+
+              <div class="col-lg-6 icon-box d-flex">
+                <i class="bi bi-alarm-fill flex-shrink-0"></i>
+                <div>
+                  <h4>Prompt Action</h4>
+                  <p>Est voluptatem labore deleniti quis a delectus et. Saepe dolorem libero sit</p>
+                </div>
+              </div><!-- End Icon Box -->
+
+            </div>
+
+          </div>
+
+          <div class="features-image col-lg-5 order-1 order-lg-2" data-aos="fade-up" data-aos-delay="200">
+            <img src="{% static 'assets/img/Image-13.png' %}" alt="">
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /More Features Section -->
+
+    <section id="about" class="about section">
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
+
+              <i class="bi bi-brightness-high flex-shrink-0"></i>
+            <h3>what's been cooking...</h3>
+            <p class="fst-italic">
+              We are driven by the belief that every mother and baby deserves the best start in life.Here are some of the activities we have engaged in
+            </p>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> <span>Safe Birth Initiative (2022)</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Maternal Mental Health Awareness Campaign (2023)</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Educational Webinar Series (2024)</span></li>
+            </ul>
+            <a href="#" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+          </div>
+
+          <div class="col-lg-6 about-images" data-aos="fade-up" data-aos-delay="200">
+            <div class="row gy-4">
+              <div class="col-lg-6">
+                <img src="{% static 'assets/img/about-company-1.jpg' %}" class="img-fluid" alt="">
+              </div>
+              <div class="col-lg-6">
+                <div class="row gy-4">
+                  <div class="col-lg-12">
+                    <img src="{% static 'assets/img/about-company-2.jpg' %}" class="img-fluid" alt="">
+                  </div>
+                  <div class="col-lg-12">
+                    <img src="{% static 'assets/img/about-company-3.jpg' %}" class="img-fluid" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- /About Section -->
+	
+{% endblock %}
