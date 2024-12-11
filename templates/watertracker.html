@@ -1,0 +1,43 @@
+{% extends 'starter-page.html' %}
+{% load static %}
+
+{% block body %}
+
+     <section class="vh-100">
+        <div class="container-fluid h-custom">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-md-9 col-lg-6 col-xl-5">
+                    <img src="{% static 'assets/img/image-07.png' %}"
+                         class="img-fluid" alt="Sample image">
+                </div>
+                <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+
+                    <form method="post" action="{% url 'watertracker' %}" >
+                        {% csrf_token %}
+                        <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start container section-title" data-aos="fade-up">
+                            <h2 >Water Tracker</h2>
+                             <p>You've drunk <strong>{{ water_intake }} L</strong> out of your daily goal of 3 L.</p>
+
+                        </div>
+
+
+                        <!-- Name input -->
+                        <div data-mdb-input-init class="form-outline mb-4">
+                            <input type="number" name="water" required id="water" class="form-control form-control-lg"
+                                   step="0.1" min="0.1" max="3"/>
+
+                            <label class="form-label" for="water">Add Water Intake (in L): </label>
+
+                        </div>
+
+                        <div class="text-center text-lg-start mt-4 pt-2">
+                            <button  type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-warning btn-group-sm"
+                                     style="padding-left: 2.5rem; padding-right: 2.5rem;">Update</button>
+                        </div>
+
+                    </form>
+
+                    <br><br>
+
+
+ {% endblock %}

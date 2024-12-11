@@ -1,0 +1,65 @@
+{% extends 'starter-page.html' %}
+{% load static %}
+
+{% block body %}
+
+    <section class="vh-100">
+        <div class="container-fluid h-custom">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-md-9 col-lg-6 col-xl-5">
+                    <img src="{% static 'assets/img/image-16.png' %}"
+                         class="img-fluid" alt="Sample image">
+                </div>
+                <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+
+                    <form method="post" action="{% url 'stk' %}">
+                        {% csrf_token %}
+                        <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start container section-title" data-aos="fade-up">
+                            <h2 >Make A Payment</h2>
+
+                        </div>
+
+
+                        <!-- Name input -->
+                        <div data-mdb-input-init class="form-outline mb-4">
+                            <input type="number" name="phone" id="phone" class="form-control form-control-lg"
+                                   placeholder="Phone number" value="254"/>
+                            <label class="form-label" for="phone">Phone number </label>
+
+                        </div>
+
+                        <!-- Amount input -->
+                        <div data-mdb-input-init class="form-outline mb-3">
+
+                            <input type="text" id="amount" name="amount" class="form-control form-control-lg"
+                                   placeholder="Amount" />
+                            <label class="form-label" for="amount">Amount</label>
+                            <br><br>
+                        </div>
+
+                        <div class="text-center text-lg-start mt-4 pt-2">
+                            <button  type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-warning btn-lg"
+                                     style="padding-left: 2.5rem; padding-right: 2.5rem;">Pay</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </section>
+
+{% endblock %}

@@ -10,7 +10,7 @@ urlpatterns = [
     path('index/', views.index, name='index'),
     path('service/', views.service, name='service'),
     path('starter/', views.starter, name='starter'),
-    path('learn/', views.learn, name='learn'),
+    path('about/', views.about, name='about'),
     path('explore/', views.explore, name='explore'),
     path('myservice/', views.myservice, name='myservice'),
     path('appointment/', views.appointment, name='appointment'),
@@ -26,8 +26,13 @@ urlpatterns = [
     path('donation/', views.donation, name='donation'),
     path('testimonial/', views.testimonial, name='testimonial'),
     path('contact/', views.contact, name='contact'),
+    path('community/', views.community, name='community'),
     path('faq/', views.faq, name='faq'),
-    path('article_1', views.article_1, name='article_1'),
-
+    path('article_1/', views.article_1, name='article_1'),
+    path('bptracker/', views.bp_tracker, name='bptracker'),
+    path('watertracker/', views.watertracker, name='watertracker'),
+    path('pay/', views.pay, name='pay'),
+    path('stk/', views.stk, name='stk'),
+    path('token/', views.token, name='token'),
 
 ]

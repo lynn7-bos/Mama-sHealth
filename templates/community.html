@@ -1,0 +1,27 @@
+{% extends 'starter-page.html' %}
+{% load static %}
+
+{% block body %}
+    <div class="container">
+    <div class="container section-title" data-aos="fade-up">
+        <h2>Community</h2>
+        <p>Let's chat</p>
+      </div>
+    <form method="post" action="{% url 'community' %}">
+        {% csrf_token %}
+        <textarea name="post_content" class="form-control" rows="3" placeholder="Share your thoughts..."></textarea>
+        <button type="submit" class="btn btn-warning mt-2">Post</button>
+    </form>
+
+    <div class="container section-title" data-aos="fade-up">
+        <h2>Recent posts</h2>
+      </div>
+    <ul class="list-group">
+        {% for post in posts %}
+        <li class="list-group-item">{{ post.content }} - <small>{{ post.user }}</small></li>
+        {% endfor %}
+    </ul>
+</div>
+
+
+{% endblock %}
